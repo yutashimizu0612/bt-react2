@@ -18,7 +18,7 @@ function InputAnswer() {
             <input type="radio" name="question1" id="question1No" />
             <label htmlFor="question1No">いいえ</label>
           </dd>
-          <dt className="mt-5">
+          <dt className="mt-6">
             現在入院中ですか。または、最近3ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか？
           </dt>
           <dd>
@@ -29,7 +29,7 @@ function InputAnswer() {
             <input type="radio" name="healthState" id="question2No" />
             <label htmlFor="question2No">いいえ</label>
           </dd>
-          <dt className="mt-5">
+          <dt className="mt-6">
             過去5年以内に、病気やけがで、手術をうけたことまたは継続して7日以上の入院をしたことがありますか？
           </dt>
           <dd>

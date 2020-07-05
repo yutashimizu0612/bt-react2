@@ -20,7 +20,7 @@ function InputCustomerInfo() {
             <input type="radio" value="female" name="gender" id="female" />
             <label htmlFor="female">女性</label>
           </dd>
-          <dt className="mt-5">生年月日</dt>
+          <dt className="mt-6">生年月日</dt>
           <dd>
             <div className="is-inline-flex">
               <div className="select">

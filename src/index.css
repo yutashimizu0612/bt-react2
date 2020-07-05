@@ -37,7 +37,7 @@ form-box
 }
 
 .form-box__content dt {
-  font-weight: bold;
+  color: #3b79a5;
 }
 
 .form-box__content dd {
