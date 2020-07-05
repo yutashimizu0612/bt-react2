@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/********************************
+form-box
+*********************************/
+.form-box {
+  border: 1px solid #65c8c8;
+}
+
+.form-box__header {
+  background: #d7f3f3;
+  border-bottom: 1px solid #65c8c8;
+  padding: 16px 0;
+  position: relative;
+}
+
+.form-box__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-box__content {
+  padding: 32px 16px;
+}
+
+.form-box__content dt {
+  font-weight: bold;
+}
+
+.form-box__content dd {
+  margin: 16px 0 0 0;
+}
