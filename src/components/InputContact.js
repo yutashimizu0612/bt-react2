@@ -2,12 +2,12 @@ import React from 'react';
 
 function InputContact() {
   return (
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">InputContact</p>
+    <div className="card">
+      <header className="card-header">
+        <p className="card-header-title">InputContact</p>
       </header>
-      <div class="card-content">
-        <div class="content"></div>
+      <div className="card-content">
+        <div className="content"></div>
       </div>
     </div>
   );

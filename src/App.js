@@ -15,7 +15,7 @@ class App extends Component {
           <InputCustomerInfo />
           <InputAnswer />
           <InputContact />
-          <div class="buttons has-addons is-centered mt-5">
+          <div className="buttons has-addons is-centered mt-5">
             <PrimaryButton />
           </div>
         </div>
