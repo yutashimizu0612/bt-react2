@@ -1,7 +1,7 @@
 import React from 'react';
 
-function primaryButton() {
-  return <button className="button is-primary is-large">Primary</button>;
+function primaryButton(props) {
+  return <button className="button is-primary is-large">{props.text}</button>;
 }
 
 export default primaryButton;
