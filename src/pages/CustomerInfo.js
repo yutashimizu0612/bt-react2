@@ -1,7 +1,7 @@
 import React from 'react';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../components/PrimaryButton';
 
-function InputCustomerInfo() {
+function CustomerInfo() {
   return (
     <>
       <div className="form-box">
@@ -59,4 +59,4 @@ function InputCustomerInfo() {
   );
 }
 
-export default InputCustomerInfo;
+export default CustomerInfo;

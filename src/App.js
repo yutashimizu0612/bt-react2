@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import AppHeader from './components/AppHeader';
-import InputCustomerInfo from './components/InputCustomerInfo';
-import InputAnswer from './components/InputAnswer';
-import InputContact from './components/InputContact';
+import CustomerInfo from './pages/CustomerInfo';
+import Answer from './pages/Answer';
+import Contact from './pages/Contact';
 
 class App extends Component {
   render() {
@@ -11,9 +12,11 @@ class App extends Component {
       <>
         <AppHeader />
         <div className="content">
-          <InputCustomerInfo />
-          <InputAnswer />
-          <InputContact />
+          <BrowserRouter>
+            <Route path="/" component={CustomerInfo}></Route>
+            <Route exact path="/contact/answer" component={Answer}></Route>
+            <Route exact path="/contact/detail" component={Contact}></Route>
+          </BrowserRouter>
         </div>
       </>
     );

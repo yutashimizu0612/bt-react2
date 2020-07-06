@@ -1,7 +1,7 @@
 import React from 'react';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../components/PrimaryButton';
 
-function InputContact() {
+function Contact() {
   return (
     <>
       <div className="form-box">
@@ -32,4 +32,4 @@ function InputContact() {
   );
 }
 
-export default InputContact;
+export default Contact;

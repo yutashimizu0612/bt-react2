@@ -1,7 +1,7 @@
 import React from 'react';
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../components/PrimaryButton';
 
-function InputAnswer() {
+function Answer() {
   return (
     <>
       <div className="form-box">
@@ -53,4 +53,4 @@ function InputAnswer() {
   );
 }
 
-export default InputAnswer;
+export default Answer;
