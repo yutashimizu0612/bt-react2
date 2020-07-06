@@ -45,7 +45,7 @@ function InputAnswer() {
           </dl>
         </div>
       </div>
-      <div className="buttons has-addons is-centered mt-5">
+      <div className="buttons is-centered mt-5">
         <PrimaryButton text="前へ戻る" />
         <PrimaryButton text="次へ進む" />
       </div>
