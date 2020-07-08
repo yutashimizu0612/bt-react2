@@ -46,7 +46,7 @@ function Answer() {
         </div>
       </div>
       <div className="buttons is-centered mt-5">
-        <PrimaryLinkButton text="前へ戻る" link="/contact/profile" />
+        <PrimaryLinkButton text="前へ戻る" link="/" />
         <PrimaryLinkButton text="次へ進む" link="/contact/detail" />
       </div>
     </>
