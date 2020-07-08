@@ -1,7 +1,7 @@
 import React from 'react';
-import PrimaryButton from '../components/PrimaryButton';
+import PrimaryLinkButton from '../components/PrimaryLinkButton';
 
-function CustomerInfo() {
+function CustomerProfile() {
   return (
     <>
       <div className="form-box">
@@ -53,10 +53,10 @@ function CustomerInfo() {
         </div>
       </div>
       <div className="buttons is-centered mt-5">
-        <PrimaryButton text="次へ進む" />
+        <PrimaryLinkButton text="次へ進む" link="/contact/answer" />
       </div>
     </>
   );
 }
 
-export default CustomerInfo;
+export default CustomerProfile;

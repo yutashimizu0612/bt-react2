@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimaryButton from '../components/PrimaryButton';
+import PrimaryLinkButton from '../components/PrimaryLinkButton';
 
 function Contact() {
   return (
@@ -25,8 +25,8 @@ function Contact() {
         </div>
       </div>
       <div className="buttons is-centered mt-5">
-        <PrimaryButton text="前へ戻る" />
-        <PrimaryButton text="次へ進む" />
+        <PrimaryLinkButton text="前へ戻る" link="/contact/answer" />
+        <PrimaryLinkButton text="次へ進む" link="/" />
       </div>
     </>
   );
