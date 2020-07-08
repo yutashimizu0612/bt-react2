@@ -2,6 +2,9 @@ import React from 'react';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
 
 function CustomerProfile() {
+  const years = [];
+  const months = [...Array(12).keys()].map(num => ++num);
+  const days = [...Array(31).keys()].map(num => ++num);
   return (
     <>
       <div className="form-box">
@@ -35,7 +38,9 @@ function CustomerProfile() {
               <div className="is-inline-flex">
                 <div className="select">
                   <select>
-                    <option>1</option>
+                    {months.map(month => (
+                      <option key={month}>{month}</option>
+                    ))}
                   </select>
                 </div>
                 <span className="mt-2 ml-2 mr-4 has-text-justified">月</span>
@@ -43,7 +48,9 @@ function CustomerProfile() {
               <div className="is-inline-flex">
                 <div className="select">
                   <select>
-                    <option>1</option>
+                    {days.map(day => (
+                      <option key={day}>{day}</option>
+                    ))}
                   </select>
                 </div>
                 <span className="mt-2 ml-2 mr-4 has-text-justified">日</span>
