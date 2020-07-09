@@ -1,8 +1,8 @@
 import React from 'react';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
+import years from '../function/years';
 
 function CustomerProfile() {
-  const years = [];
   const months = [...Array(12).keys()].map(num => ++num);
   const days = [...Array(31).keys()].map(num => ++num);
   return (
@@ -30,7 +30,10 @@ function CustomerProfile() {
               <div className="is-inline-flex">
                 <div className="select">
                   <select>
-                    <option>1990年（平成2）</option>
+                    <option>選択してください</option>
+                    {years.map((year, index) => (
+                      <option key={index}>{year}</option>
+                    ))}
                   </select>
                 </div>
                 <span className="mt-2 ml-2 mr-4 has-text-justified">年</span>
