@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul,
+li {
+  list-style: none;
+}
+
+/********************************
+form-box
+*********************************/
+.form-box {
+  border: 1px solid #65c8c8;
+}
+
+.form-box__header {
+  background: #d7f3f3;
+  border-bottom: 1px solid #65c8c8;
+  padding: 8px 0;
+  position: relative;
+}
+
+.form-box__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-box__content {
+  padding: 32px 16px;
+}
+
+.question-item p {
+  color: #3b79a5;
+}
