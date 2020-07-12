@@ -5,38 +5,44 @@ export const SELECT_BIRTH_DAY = 'SELECT_BIRTH_DAY';
 export const ANSWER_QUESTION = 'ANSWER_QUESTION';
 export const INPUT_CONTACT_DETAIL = 'INPUT_CONTACT_DETAIL';
 
-export const selectGender = () => {
+export const selectGender = value => {
   return {
     type: 'SELECT_GENDER',
+    value,
   };
 };
 
-export const selectBirthYear = () => {
+export const selectBirthYear = value => {
   return {
     type: 'SELECT_BIRTH_YEAR',
+    value,
   };
 };
 
-export const selectBirthMonth = () => {
+export const selectBirthMonth = value => {
   return {
     type: 'SELECT_BIRTH_MONTH',
+    value,
   };
 };
 
-export const selectBirthDay = () => {
+export const selectBirthDay = value => {
   return {
     type: 'SELECT_BIRTH_DAY',
+    value,
   };
 };
 
-export const answerQuestion = () => {
+export const answerQuestion = value => {
   return {
     type: 'ANSWER_QUESTION',
+    value,
   };
 };
 
-export const inputContactDetail = () => {
+export const inputContactDetail = value => {
   return {
     type: 'INPUT_CONTACT_DETAIL',
+    value,
   };
 };
