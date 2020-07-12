@@ -9,6 +9,11 @@ class Answer extends Component {
     };
   }
 
+  handleChange = (e, current) => {
+    console.log(e.target.value);
+    this.showNextQuestion(current);
+  };
+
   showNextQuestion = current => {
     // "stateの値"と"設問の番号"が一致した場合のみ、currentを1つ足す（一度表示されたら、設問を非表示にしないため）
     if (this.state.currentQuestion === current) {
@@ -33,8 +38,9 @@ class Answer extends Component {
                 <input
                   type="radio"
                   name="question1"
+                  value="yes"
                   id="question1Yes"
-                  onChange={() => this.showNextQuestion(1)}
+                  onChange={e => this.handleChange(e, 1)}
                 />
                 <label htmlFor="question1Yes" className="mr-3">
                   はい
@@ -42,8 +48,9 @@ class Answer extends Component {
                 <input
                   type="radio"
                   name="question1"
+                  value="no"
                   id="question1No"
-                  onChange={() => this.showNextQuestion(1)}
+                  onChange={e => this.handleChange(e, 1)}
                 />
                 <label htmlFor="question1No">いいえ</label>
               </li>
@@ -55,8 +62,9 @@ class Answer extends Component {
                   <input
                     type="radio"
                     name="healthState"
+                    value="yes"
                     id="question2Yes"
-                    onChange={() => this.showNextQuestion(2)}
+                    onChange={e => this.handleChange(e, 2)}
                   />
                   <label htmlFor="question2Yes" className="mr-3">
                     はい
@@ -64,8 +72,9 @@ class Answer extends Component {
                   <input
                     type="radio"
                     name="healthState"
+                    value="no"
                     id="question2No"
-                    onChange={() => this.showNextQuestion(2)}
+                    onChange={e => this.handleChange(e, 2)}
                   />
                   <label htmlFor="question2No">いいえ</label>
                 </li>
@@ -78,12 +87,20 @@ class Answer extends Component {
                   <input
                     type="radio"
                     name="hospitalization"
+                    value="yes"
                     id="question3Yes"
+                    onChange={e => this.handleChange(e)}
                   />
                   <label htmlFor="question3Yes" className="mr-3">
                     はい
                   </label>
-                  <input type="radio" name="hospitalization" id="question3No" />
+                  <input
+                    type="radio"
+                    name="hospitalization"
+                    value="no"
+                    id="question3No"
+                    onChange={e => this.handleChange(e)}
+                  />
                   <label htmlFor="question3No">いいえ</label>
                 </li>
               )}

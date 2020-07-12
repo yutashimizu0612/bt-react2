@@ -2,6 +2,9 @@ import React from 'react';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
 
 function Contact() {
+  const handleChange = e => {
+    console.log(e.target.value);
+  };
   return (
     <>
       <div className="form-box">
@@ -19,6 +22,7 @@ function Contact() {
                 className="textarea"
                 name="contact"
                 rows="10"
+                onChange={e => handleChange(e)}
               ></textarea>
             </dd>
           </dl>

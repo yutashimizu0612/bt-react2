@@ -5,6 +5,9 @@ import years from '../function/years';
 function CustomerProfile() {
   const months = [...Array(12).keys()].map(num => ++num);
   const days = [...Array(31).keys()].map(num => ++num);
+  const handleChange = e => {
+    console.log(e.target.value);
+  };
   return (
     <>
       <div className="form-box">
@@ -18,18 +21,30 @@ function CustomerProfile() {
           <dl>
             <dt>性別</dt>
             <dd>
-              <input type="radio" value="male" name="gender" id="male" />
+              <input
+                type="radio"
+                value="male"
+                name="gender"
+                id="male"
+                onChange={e => handleChange(e)}
+              />
               <label htmlFor="male" className="mr-3">
                 男性
               </label>
-              <input type="radio" value="female" name="gender" id="female" />
+              <input
+                type="radio"
+                value="female"
+                name="gender"
+                id="female"
+                onChange={e => handleChange(e)}
+              />
               <label htmlFor="female">女性</label>
             </dd>
             <dt className="mt-6">生年月日</dt>
             <dd>
               <div className="is-inline-flex">
                 <div className="select">
-                  <select>
+                  <select onChange={e => handleChange(e)}>
                     <option>選択してください</option>
                     {years.map((year, index) => (
                       <option key={index}>{year}</option>
@@ -40,7 +55,7 @@ function CustomerProfile() {
               </div>
               <div className="is-inline-flex">
                 <div className="select">
-                  <select>
+                  <select onChange={e => handleChange(e)}>
                     {months.map(month => (
                       <option key={month}>{month}</option>
                     ))}
@@ -50,7 +65,7 @@ function CustomerProfile() {
               </div>
               <div className="is-inline-flex">
                 <div className="select">
-                  <select>
+                  <select onChange={e => handleChange(e)}>
                     {days.map(day => (
                       <option key={day}>{day}</option>
                     ))}
