@@ -1,10 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
+import { inputContactDetail } from '../actions';
 
-function Contact() {
-  const handleChange = e => {
-    console.log(e.target.value);
-  };
+function Contact(props) {
   return (
     <>
       <div className="form-box">
@@ -22,7 +21,7 @@ function Contact() {
                 className="textarea"
                 name="contact"
                 rows="10"
-                onChange={e => handleChange(e)}
+                onChange={e => props.inputContactDetail(e.target.value)}
               ></textarea>
             </dd>
           </dl>
@@ -36,4 +35,10 @@ function Contact() {
   );
 }
 
-export default Contact;
+const mapStateToProps = state => ({ contact: state.contact });
+
+const mapDispatchToProps = dispatch => ({
+  inputContactDetail: e => dispatch(inputContactDetail(e)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
