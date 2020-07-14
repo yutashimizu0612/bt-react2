@@ -32,9 +32,9 @@ const initialState = {
     day: '',
   },
   question: {
-    1: true,
-    2: true,
-    3: false,
+    1: '',
+    2: '',
+    3: '',
   },
   detail: '入力した内容',
 };
@@ -71,7 +71,13 @@ const contact = (state = initialState, action) => {
         },
       };
     case ANSWER_QUESTION:
-      console.log('ANSWER_QUESTION');
+      return {
+        ...state,
+        question: {
+          ...state.question,
+          [action.num]: action.value,
+        },
+      };
     case INPUT_CONTACT_DETAIL:
       return {
         ...state,

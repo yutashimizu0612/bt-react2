@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
+import { answerQuestion } from '../actions';
 
 class Answer extends Component {
   constructor(props) {
@@ -10,7 +12,7 @@ class Answer extends Component {
   }
 
   handleChange = (e, current) => {
-    console.log(e.target.value);
+    this.props.answerQuestion(e.target.value, current);
     this.showNextQuestion(current);
   };
 
@@ -89,7 +91,7 @@ class Answer extends Component {
                     name="hospitalization"
                     value="yes"
                     id="question3Yes"
-                    onChange={e => this.handleChange(e)}
+                    onChange={e => this.handleChange(e, 3)}
                   />
                   <label htmlFor="question3Yes" className="mr-3">
                     はい
@@ -99,7 +101,7 @@ class Answer extends Component {
                     name="hospitalization"
                     value="no"
                     id="question3No"
-                    onChange={e => this.handleChange(e)}
+                    onChange={e => this.handleChange(e, 3)}
                   />
                   <label htmlFor="question3No">いいえ</label>
                 </li>
@@ -116,4 +118,8 @@ class Answer extends Component {
   }
 }
 
-export default Answer;
+const mapDispatchToProps = dispatch => ({
+  answerQuestion: (e, num) => dispatch(answerQuestion(e, num)),
+});
+
+export default connect(null, mapDispatchToProps)(Answer);

@@ -33,10 +33,11 @@ export const selectBirthDay = value => {
   };
 };
 
-export const answerQuestion = value => {
+export const answerQuestion = (value, num) => {
   return {
     type: 'ANSWER_QUESTION',
     value,
+    num,
   };
 };
 
