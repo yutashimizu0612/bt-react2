@@ -15,7 +15,7 @@ function Contact(props) {
         </div>
         <div className="form-box__content">
           <dl>
-            <dt>ご相談内容</dt>
+            <dt className="form-box__title">ご相談内容</dt>
             <dd>
               <textarea
                 className="textarea"
@@ -29,7 +29,7 @@ function Contact(props) {
       </div>
       <div className="buttons is-centered mt-5">
         <PrimaryLinkButton text="前へ戻る" link="/contact/answer" />
-        <PrimaryLinkButton text="次へ進む" link="/" />
+        <PrimaryLinkButton text="次へ進む" link="/contact/confirm" />
       </div>
     </>
   );

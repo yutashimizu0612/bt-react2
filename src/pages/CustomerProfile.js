@@ -24,7 +24,7 @@ class CustomerProfile extends Component {
           </div>
           <div className="form-box__content">
             <dl>
-              <dt>性別</dt>
+              <dt className="form-box__title">性別</dt>
               <dd>
                 <input
                   type="radio"
@@ -45,7 +45,7 @@ class CustomerProfile extends Component {
                 />
                 <label htmlFor="female">女性</label>
               </dd>
-              <dt className="mt-6">生年月日</dt>
+              <dt className="mt-6 form-box__title">生年月日</dt>
               <dd>
                 <div className="is-inline-flex">
                   <div className="select">

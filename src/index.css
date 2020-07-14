@@ -41,6 +41,12 @@ form-box
   padding: 32px 16px;
 }
 
+.form-box__title {
+  color: #3b79a5;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
 .question-item p {
   color: #3b79a5;
 }
