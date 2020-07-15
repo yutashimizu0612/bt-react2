@@ -11,6 +11,7 @@ import {
 
 class CustomerProfile extends Component {
   render() {
+    const contact = this.props.contact;
     const months = [...Array(12).keys()].map(num => ++num);
     const days = [...Array(31).keys()].map(num => ++num);
     return (
@@ -31,6 +32,7 @@ class CustomerProfile extends Component {
                   value="male"
                   name="gender"
                   id="male"
+                  checked={contact.gender === 'male' ? true : false}
                   onChange={e => this.props.selectGender(e.target.value)}
                 />
                 <label htmlFor="male" className="mr-3">
@@ -41,6 +43,7 @@ class CustomerProfile extends Component {
                   value="female"
                   name="gender"
                   id="female"
+                  checked={contact.gender === 'female' ? true : false}
                   onChange={e => this.props.selectGender(e.target.value)}
                 />
                 <label htmlFor="female">女性</label>
@@ -50,6 +53,7 @@ class CustomerProfile extends Component {
                 <div className="is-inline-flex">
                   <div className="select">
                     <select
+                      value={contact.birthdate.year}
                       onChange={e => this.props.selectBirthYear(e.target.value)}
                     >
                       <option>選択してください</option>
@@ -63,6 +67,7 @@ class CustomerProfile extends Component {
                 <div className="is-inline-flex">
                   <div className="select">
                     <select
+                      value={contact.birthdate.month}
                       onChange={e =>
                         this.props.selectBirthMonth(e.target.value)
                       }
@@ -77,6 +82,7 @@ class CustomerProfile extends Component {
                 <div className="is-inline-flex">
                   <div className="select">
                     <select
+                      value={contact.birthdate.day}
                       onChange={e => this.props.selectBirthDay(e.target.value)}
                     >
                       {days.map(day => (

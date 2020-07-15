@@ -19,7 +19,7 @@ const initialState = {
     2: '',
     3: '',
   },
-  detail: '入力した内容',
+  detail: '',
 };
 
 const contact = (state = initialState, action) => {

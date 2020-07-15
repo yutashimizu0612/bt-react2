@@ -26,6 +26,7 @@ class Answer extends Component {
   };
 
   render() {
+    const contact = this.props.contact;
     return (
       <>
         <div className="form-box">
@@ -42,6 +43,7 @@ class Answer extends Component {
                   name="question1"
                   value="yes"
                   id="question1Yes"
+                  checked={contact.question[1] === 'yes' ? true : false}
                   onChange={e => this.handleChange(e, 1)}
                 />
                 <label htmlFor="question1Yes" className="mr-3">
@@ -52,6 +54,7 @@ class Answer extends Component {
                   name="question1"
                   value="no"
                   id="question1No"
+                  checked={contact.question[1] === 'no' ? true : false}
                   onChange={e => this.handleChange(e, 1)}
                 />
                 <label htmlFor="question1No">いいえ</label>
@@ -66,6 +69,7 @@ class Answer extends Component {
                     name="healthState"
                     value="yes"
                     id="question2Yes"
+                    checked={contact.question[2] === 'yes' ? true : false}
                     onChange={e => this.handleChange(e, 2)}
                   />
                   <label htmlFor="question2Yes" className="mr-3">
@@ -76,6 +80,7 @@ class Answer extends Component {
                     name="healthState"
                     value="no"
                     id="question2No"
+                    checked={contact.question[2] === 'no' ? true : false}
                     onChange={e => this.handleChange(e, 2)}
                   />
                   <label htmlFor="question2No">いいえ</label>
@@ -91,6 +96,7 @@ class Answer extends Component {
                     name="hospitalization"
                     value="yes"
                     id="question3Yes"
+                    checked={contact.question[3] === 'yes' ? true : false}
                     onChange={e => this.handleChange(e, 3)}
                   />
                   <label htmlFor="question3Yes" className="mr-3">
@@ -101,6 +107,7 @@ class Answer extends Component {
                     name="hospitalization"
                     value="no"
                     id="question3No"
+                    checked={contact.question[3] === 'no' ? true : false}
                     onChange={e => this.handleChange(e, 3)}
                   />
                   <label htmlFor="question3No">いいえ</label>
@@ -118,8 +125,10 @@ class Answer extends Component {
   }
 }
 
+const mapStateToProps = state => ({ contact: state.contact });
+
 const mapDispatchToProps = dispatch => ({
   answerQuestion: (e, num) => dispatch(answerQuestion(e, num)),
 });
 
-export default connect(null, mapDispatchToProps)(Answer);
+export default connect(mapStateToProps, mapDispatchToProps)(Answer);

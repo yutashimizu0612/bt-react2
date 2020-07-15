@@ -21,6 +21,7 @@ function Contact(props) {
                 className="textarea"
                 name="contact"
                 rows="10"
+                value={props.contact.detail}
                 onChange={e => props.inputContactDetail(e.target.value)}
               ></textarea>
             </dd>
