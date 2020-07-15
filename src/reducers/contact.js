@@ -7,23 +7,6 @@ import {
   INPUT_CONTACT_DETAIL,
 } from '../actions';
 
-// contact = {
-//   customer: {
-//     gender: male,
-//     birthdate: {
-//       year: 1988,
-//       month: 6,
-//       day: 12,
-//     },
-//   },
-//   question: {
-//     1: true,
-//     2: true,
-//     3: false,
-//   },
-//   detail: '入力した内容',
-// };
-
 const initialState = {
   gender: '',
   birthdate: {
