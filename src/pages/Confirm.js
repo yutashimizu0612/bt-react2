@@ -5,6 +5,7 @@ import PrimaryLinkButton from '../components/PrimaryLinkButton';
 class Confirm extends Component {
   render() {
     const contact = this.props.contact;
+    const birthyear = contact.birthdate.year.slice(0, 4);
     return (
       <>
         <div className="form-box">
@@ -20,8 +21,8 @@ class Confirm extends Component {
               <dd>{contact.gender === 'male' ? '男性' : '女性'}</dd>
               <dt className="mt-6 form-box__title">生年月日</dt>
               <dd>
-                {contact.birthdate.year}年{contact.birthdate.month}月
-                {contact.birthdate.day}日
+                {birthyear}年{contact.birthdate.month}月{contact.birthdate.day}
+                日
               </dd>
               <dt className="mt-6 form-box__title">
                 現在、生命保険に加入されていますか？
