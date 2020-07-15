@@ -39,7 +39,7 @@ function Contact(props) {
 const mapStateToProps = state => ({ contact: state.contact });
 
 const mapDispatchToProps = dispatch => ({
-  inputContactDetail: e => dispatch(inputContactDetail(e)),
+  inputContactDetail: value => dispatch(inputContactDetail(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

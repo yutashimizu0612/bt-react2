@@ -128,7 +128,7 @@ class Answer extends Component {
 const mapStateToProps = state => ({ contact: state.contact });
 
 const mapDispatchToProps = dispatch => ({
-  answerQuestion: (e, num) => dispatch(answerQuestion(e, num)),
+  answerQuestion: (value, num) => dispatch(answerQuestion(value, num)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Answer);

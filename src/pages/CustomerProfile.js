@@ -107,10 +107,10 @@ class CustomerProfile extends Component {
 const mapStateToProps = state => ({ contact: state.contact });
 
 const mapDispatchToProps = dispatch => ({
-  selectGender: e => dispatch(selectGender(e)),
-  selectBirthYear: e => dispatch(selectBirthYear(e)),
-  selectBirthMonth: e => dispatch(selectBirthMonth(e)),
-  selectBirthDay: e => dispatch(selectBirthDay(e)),
+  selectGender: value => dispatch(selectGender(value)),
+  selectBirthYear: value => dispatch(selectBirthYear(value)),
+  selectBirthMonth: value => dispatch(selectBirthMonth(value)),
+  selectBirthDay: value => dispatch(selectBirthDay(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustomerProfile);
