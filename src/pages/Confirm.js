@@ -5,7 +5,7 @@ import PrimaryLinkButton from '../components/PrimaryLinkButton';
 class Confirm extends Component {
   render() {
     const contact = this.props.contact;
-    const birthyear = contact.birthdate.year.slice(0, 4);
+    const birthyear = contact.birthdate.year.slice(0, 4); // 西暦4桁のみを切り出し
     return (
       <>
         <div className="form-box">
