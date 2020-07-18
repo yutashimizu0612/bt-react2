@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
-import { answerQuestion } from '../actions';
+import { answerQuestion } from '../actions/contact';
 
 class Answer extends Component {
   constructor(props) {

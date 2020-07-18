@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
-import { inputContactDetail } from '../actions';
+import { inputContactDetail } from '../actions/contact';
 
 class Contact extends Component {
   render() {

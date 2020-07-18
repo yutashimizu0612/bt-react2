@@ -7,7 +7,7 @@ import {
   selectBirthYear,
   selectBirthMonth,
   selectBirthDay,
-} from '../actions';
+} from '../actions/contact';
 
 class CustomerProfile extends Component {
   render() {

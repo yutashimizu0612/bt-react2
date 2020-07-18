@@ -5,7 +5,7 @@ import {
   SELECT_BIRTH_DAY,
   ANSWER_QUESTION,
   INPUT_CONTACT_DETAIL,
-} from '../actions';
+} from '../actions/contact';
 
 const initialState = {
   gender: '',
