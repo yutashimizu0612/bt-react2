@@ -11,8 +11,8 @@ const initialState = {
   gender: '',
   birthdate: {
     year: '',
-    month: '',
-    day: '',
+    month: '1',
+    day: '1',
   },
   question: {
     1: '',
