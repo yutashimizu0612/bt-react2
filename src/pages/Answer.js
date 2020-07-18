@@ -4,11 +4,13 @@ import PrimaryLinkButton from '../components/PrimaryLinkButton';
 import { answerQuestion } from '../actions/contact';
 import { moveToNext } from '../actions/currentQuestion';
 
+const questionLength = 3; // 質問の数
+
 class Answer extends Component {
   handleChange = (e, current) => {
     this.props.answerQuestion(e.target.value, current);
     // "stateの値"と"設問の番号"が一致した場合のみ、currentを1つ足す（一度表示されたら、設問を非表示にしないため）
-    if (this.props.currentQuestion.answer === current && current < 3) {
+    if (this.props.currentQuestion.answer === current && current < questionLength) {
       this.props.moveToNext(current);
     }
   };
