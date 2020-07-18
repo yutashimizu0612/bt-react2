@@ -8,7 +8,7 @@ class Answer extends Component {
   handleChange = (e, current) => {
     this.props.answerQuestion(e.target.value, current);
     // "stateの値"と"設問の番号"が一致した場合のみ、currentを1つ足す（一度表示されたら、設問を非表示にしないため）
-    if (this.props.currentQuestion.answer === current) {
+    if (this.props.currentQuestion.answer === current && current < 3) {
       this.props.moveToNext(current);
     }
   };
