@@ -2,31 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PrimaryLinkButton from '../components/PrimaryLinkButton';
 import { answerQuestion } from '../actions/contact';
+import { moveToNext } from '../actions/currentQuestion';
 
 class Answer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentQuestion: 1,
-    };
-  }
-
   handleChange = (e, current) => {
     this.props.answerQuestion(e.target.value, current);
-    this.showNextQuestion(current);
-  };
-
-  showNextQuestion = current => {
     // "stateの値"と"設問の番号"が一致した場合のみ、currentを1つ足す（一度表示されたら、設問を非表示にしないため）
-    if (this.state.currentQuestion === current) {
-      this.setState({
-        currentQuestion: current + 1,
-      });
+    if (this.props.currentQuestion.answer === current) {
+      this.props.moveToNext(current);
     }
   };
 
   render() {
     const contact = this.props.contact;
+    const currentQuestion = this.props.currentQuestion;
     return (
       <>
         <div className="form-box">
@@ -59,7 +48,7 @@ class Answer extends Component {
                 />
                 <label htmlFor="question1No">いいえ</label>
               </li>
-              {this.state.currentQuestion > 1 && (
+              {currentQuestion.answer > 1 && (
                 <li className="question-item">
                   <p className="mt-6">
                     現在入院中ですか。または、最近3ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか？
@@ -86,7 +75,7 @@ class Answer extends Component {
                   <label htmlFor="question2No">いいえ</label>
                 </li>
               )}
-              {this.state.currentQuestion > 2 && (
+              {currentQuestion.answer > 2 && (
                 <li className="question-item">
                   <p className="mt-6">
                     過去5年以内に、病気やけがで、手術をうけたことまたは継続して7日以上の入院をしたことがありますか？
@@ -125,10 +114,14 @@ class Answer extends Component {
   }
 }
 
-const mapStateToProps = state => ({ contact: state.contact });
+const mapStateToProps = state => ({
+  contact: state.contact,
+  currentQuestion: state.currentQuestion,
+});
 
 const mapDispatchToProps = dispatch => ({
   answerQuestion: (value, num) => dispatch(answerQuestion(value, num)),
+  moveToNext: current => dispatch(moveToNext(current)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Answer);
