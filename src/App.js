@@ -5,6 +5,7 @@ import AppHeader from './components/AppHeader';
 import CustomerProfile from './pages/CustomerProfile';
 import Answer from './pages/Answer';
 import Contact from './pages/Contact';
+import Confirm from './pages/Confirm';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route exact path="/" component={CustomerProfile}></Route>
             <Route exact path="/contact/answer" component={Answer}></Route>
             <Route exact path="/contact/detail" component={Contact}></Route>
+            <Route exact path="/contact/confirm" component={Confirm}></Route>
           </BrowserRouter>
         </div>
       </>
